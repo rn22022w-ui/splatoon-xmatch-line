@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: splatoon-xmatch-area
+    schedule: "*/15 * * * *"
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python xmatch_area_line_notify.py
