@@ -87,7 +87,7 @@ def main():
     end_local = iso_to_local(target["endTime"])
 
     # 1時間前〜開始直前に通知
-    notify_from = start_local - timedelta(hours=1)
+    notify_from = start_local - timedelta(days=30)
 
     print("start_local:", start_local.isoformat())
     print("end_local:", end_local.isoformat())
