@@ -2,16 +2,23 @@ name: Splatoon X Match Area Notify
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # 15分ごと（UTC）
-  workflow_dispatch:        # 手動実行も可能
+    - cron: "*/15 * * * *"   # 15分ごと
+  workflow_dispatch:
 
 jobs:
   notify:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+
+      - name: Restore state cache
+        uses: actions/cache@v4
+        with:
+          path: notify_x_area_1h.json
+          key: xmatch-state
+          restore-keys: |
+            xmatch-state
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -26,3 +33,9 @@ jobs:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
         run: python -u xmatch_area_line_notify.py
+
+      - name: Save state cache
+        uses: actions/cache@v4
+        with:
+          path: notify_x_area_1h.json
+          key: xmatch-state
