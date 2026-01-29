@@ -2,7 +2,7 @@ name: Splatoon X Match Area Notify
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # 15分ごと
+    - cron: "*/30 * * * *"   # 15分ごと
   workflow_dispatch:
 
 jobs:
