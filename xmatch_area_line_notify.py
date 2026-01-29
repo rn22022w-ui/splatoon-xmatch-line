@@ -26,7 +26,23 @@ STAGE_JA = {
     "Wahoo World": "スメーシーワールド",
     "Scorch Gorge": "ナメロウ金属",
     "Lemuria Hub": "タラポートショッピングパーク",
+    "Flounder Heights": "ヒラメが丘団地",
+    "Inkblot Art Academy": "アンチョビットゲームズ",
+    "Mincemeat Metalworks": "ナメロウ金属",
+    "Museum d'Alfonsino": "キンメダイ美術館",
+    "Crableg Capital": "ザトウマーケット",
+    "Urchin Underpass": "デカライン高架下",
+    "MakoMart": "マテガイ放水路",
+    "Robo ROM-en": "コンブトラック",
+    "Hagglefish Market": "ザトウマーケット",
+    "Shipshape Cargo Co.": "マンタマリア号",
+    "Bluefin Depot": "ネギトロ炭鉱",
+    "Barnacle & Dime": "タチウオパーキング",
+    "Mahi-Mahi Resort": "マヒマヒリゾート＆スパ",
+    "Sturgeon Shipyard": "チョウザメ造船",
+    "Humpback Pump Track": "Bバスパーク",
 }
+
 
 AREA_RULES = {"Splat Zones"}
 
